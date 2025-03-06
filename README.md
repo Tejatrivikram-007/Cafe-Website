@@ -1,11 +1,11 @@
-Here’s an example of content for the GitHub repository for the "Cups & Crumps" cafe website built using HTML, CSS, and JavaScript:
+Here’s an example of content for the GitHub repository for the "Cups & Crumbs" cafe website built using HTML, CSS, and JavaScript:
 
 ---
 
-## Cups & Crumps - Cafe Website
+## Cups & Crumbs - Cafe Website
 
 **Description**  
-Cups & Crumps is a fully functional cafe website designed and developed using HTML, CSS, and JavaScript. It offers a sleek and responsive user experience, allowing users to explore the cafe's menu, place orders, and navigate through the various sections of the site seamlessly. The website is designed to be fully responsive, making it accessible across all devices, from desktops to smartphones.
+Cups & Crumbs is a fully functional cafe website designed and developed using HTML, CSS, and JavaScript. It offers a sleek and responsive user experience, allowing users to explore the cafe's menu, place orders, and navigate through the various sections of the site seamlessly. The website is designed to be fully responsive, making it accessible across all devices,like desktops .
 
 ---
 
@@ -46,12 +46,12 @@ To run this project locally, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/cups-and-crumps.git
+   git clone https://github.com/your-username/cups-and-crumbs.git
    ```
 
 2. Navigate to the project folder:
    ```bash
-   cd cups-and-crumps
+   cd cups-and-crumbs
    ```
 
 3. Open `index.html` in your browser to view the site locally.
