@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cup & Crumbs</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+
+</head>
+<body>
+     <!-- -------------------------------------------page1(logo)----------------------------------------- -->
+
+     <div class="page page1" id="page1">
+        <div class="logo-container">
+            <div class="logo">C</div>
+            <div class="name">Cobbs & Coffee</div>
+        </div>
+    </div>
+    
+    <!-- ------------------------------------------------page2(welcome)------------------------------------- -->
+
+    <div class="page page2" id="page2" style="background-image: url( '/images/home.jpg');">
+        <div class="welcome-message">
+            
+            <h1>Welcome to Our Cafe</h1>
+            <pre>Where every cup is brewed with passion, and every bite is made to perfection. Step inside and enjoy a cozy atmosphere with the finest coffee and pastries.</pre>
+            <a href="#menu"><button class="cta-button">Explore Our Menu</button></a>
+        </div>
+
+        <div class="social">
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </div>
+
+        <!-- <div class="right-side">
+            <ul class="nav-bar">
+                <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                 
+                 <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#location">Location</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    
+            </ul>
+        </div>
+    </div> -->
+
+    </div>
+
+    <!-- -------------------------------------------------------whole body---------------------------------------------- -->
+     <div class="content">
+
+        <!-- --------------------------------------------------------Header------------------------------------------ -->
+
+        <header>
+            <div class="h-logo">
+                <h1>Cup & Crumbs</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#location">Location</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon" onclick="toggleCart()">
+                <div id="cart-symbol">
+                    Cart <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-count" class="cart-count">0</span>
+                </div>
+            </div>
+            <span class="sign-in-icon" onclick="toggleSignIn()">🔑</span>
+
+        </header>
+
+        <!-- ------------------------------------------------------------cart---------------------------------------------- -->
+        
+        <div id="cart" style="display: none; border: 1px solid #ccc; padding: 10px; width: 300px; margin: 20px auto;">
+            <h2>Cart</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: ₹<span id="cart-total">0</span></p>
+            <button id="clear-cart" onclick="clearCart()">Clear Cart</button>
+            <button id="process-order" onclick="processOrder()"><a href="details.html">Process Order</a></button>
+            <!-- <div id="cart-emoji" style="font-size: 5rem; text-align: center;">😢</div> -->
+        </div>
+    
+        <!-- ----------------------------------------------------signin----------------------------------------------------------- -->
+        
+        <div id="overlay" onclick="closeOverlay()">
+            <div class="container" id="signInContainer" onclick="event.stopPropagation()">
+                <h1>Sign In</h1>
+                <form>
+                    <input type="email" id="email" placeholder="Email" required>
+                    <div>
+                        <input type="password" id="password" placeholder="Password" required>
+                        <span class="toggle-btn" id="togglePassword"></span>
+                    </div>
+                    <button type="button" onclick="signIn()">Sign In</button>
+                    <button id="signOut" style="padding: 10px 15px; background-color: #ff4d4d; color: white; border: none; border-radius: 5px; cursor: pointer;">Sign Out</button>
+                </form>
+                <div class="link">
+                    <a href="#" onclick="showResetPassword()">Forgot Password?</a>
+                </div>
+                <div class="link">
+                    <a href="#" onclick="showSignUp()">Don't have an account? Sign Up</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- -------------------------------------------------------Home----------------------------------------------------- -->
+
+        <div id="home">
+            <div class="home" style="background-image: url('/images/wall.jpg'); width: 80%;">
+                <h2>Welcome to Our Cafe</h2>
+                <pre>
+                    Where every cup tells a story.
+            At Cup & Crumbs, we’re more than just coffee; we’re a haven for dreamers, doers, and everyone in between. Nestled in the heart of Mysore, our cozy space is designed for you to unwind, connect, and savor the little moments that matter.
+            Our menu features handcrafted beverages, delectable bites, and treats made with love and the finest ingredients. Whether you’re here for a morning pick-me-up, a quiet moment with a book, or a lively chat with friends, we’ve got something special brewing just for you.
+                        </pre>
+            </div>
+        </div>
+
+        <!-- ----------------------------------------------------------about us-------------------------------------------------- -->
+        
+        <section id="about">
+            <h2>Our Story</h2>
+            <div class="image-container">
+                <div class="image-box">
+                    <img src="/images/starting.jpg" alt="Coffee Shop Image">
+                    <div class="overlay">
+                        <pre>
+                            Welcome to Cup & Crumbs, where passion meets the perfect brew. Founded in 2024, our journey began with a simple vision: to create a space where people could come together, savor exceptional coffee, and feel at home.
+                        </pre>
+                    </div>
+                </div>
+        
+                <div class="image-box">
+                    <img src="/images/about coffee.jpg" alt="Second Coffee Shop Image">
+                    <div class="overlay">
+                        <pre>
+                            We believe that every cup of coffee tells a story — from the rich origins of our beans to the moments shared over them. That’s why we are committed to sourcing ethically grown beans, supporting sustainable farming practices, and crafting every beverage with care.
+                        </pre>
+                    </div>
+                </div>
+        
+                <div class="image-box">
+                    <img src="/images/join.jpg" alt="Third Coffee Shop Image">
+                    <div class="overlay">
+                        <pre>
+                            Join us for a cozy atmosphere, exceptional service, and the finest flavors in every sip.
+                        </pre>
+                    </div>
+                </div>
+            </div>
+            <a href="#menu" class="btn">EXPLORE OUR MENU</a>
+        </section>
+        
+
+        <!-- --------------------------------------------------------------menu--------------------------------------------------------- -->
+
+        <section id="menu">
+            <h2>Our Menu</h2>
+            <div class="category-container">
+                <button class="category-button selected" data-category="specials">Specials</button>
+                <button class="category-button" data-category="coffee">Coffee</button>
+                <button class="category-button" data-category="tea">Tea</button>
+                <button class="category-button" data-category="smoothies">Smoothies</button>
+                <button class="category-button" data-category="desserts">Desserts</button>
+                <button class="category-button" data-category="pastries">Pastries</button>
+                <button class="category-button" data-category="salads">Salads</button>
+                <button class="category-button" data-category="sandwiches">Sandwiches</button>
+                <button class="category-button" data-category="soups">Soups</button>
+                <button class="category-button" data-category="snacks">Snacks</button>
+            </div>
+        
+            <div class="menu-container">
+                <!-- -- coffee-- -->
+                <div class="menu-category coffee">
+                    <!-- <h3>Coffee</h3> -->
+                    <div class="menu-item" data-price="60">
+                        <img src="/categories/coffee/Single-Shot-Espresso.jpg" alt="Espresso">
+                        <h3>Espresso</h3>
+                        <p>A concentrated coffee shot that’s small but packed with flavor.<br>Price: ₹60</p>
+                        <div class="order-controls">
+                            <button class="order-decrease">-</button>
+                            <button class="order-now">Order Now</button>
+                            <button class="order-increase">+</button>
+                        </div>
+        
+                    </div>
+                    <div class="menu-item" data-price="80">
+                        <img src="/categories/coffee/Cappacino.webp" alt="Cappuccino">
+                        <h3>Cappuccino</h3>
+                        <p>Espresso with steamed milk and a layer of milk foam.<br>Price: ₹80</p>
+                        <div class="order-controls">
+                            <button class="order-decrease">-</button>
+                            <button class="order-now">Order Now</button>
+                            <button class="order-increase">+</button>
+                        </div>
+        
+                    </div>
+                    <div class="menu-item" data-price="100">
+                        <img src="/categories/coffee/americano1.jpg" alt="Americano">
+                        <h3>Americano</h3>
+                        <p>Smooth espresso mixed with hot water for a rich, mellow flavor.<br>Price: ₹100</p>
+                        <div class="order-controls">
+                            <button class="order-decrease">-</button>
+                            <button class="order-now">Order Now</button>
+                            <button class="order-increase">+</button>
+                        </div>
+        
+                    </div>
+                    <div class="menu-item" data-price="90">
+                        <img src="/categories/coffee/Latte.jpg" alt="Latte">
+                        <h3>Latte</h3>
+                        <p>Espresso with creamy steamed milk.<br>Price: ₹90</p>
+                        <div class="order-controls">
+                            <button class="order-decrease">-</button>
+                            <button class="order-now">Order Now</button>
+                            <button class="order-increase">+</button>
+                        </div>
+        
+                    </div>
+                    <div class="menu-item" data-price="90">
+                        <img src="/categories/coffee/flat white.jpg" alt="Flat White">
+                        <h3>Flat White</h3>
+                        <p>Espresso with smooth steamed milk.<br>Price: ₹90</p>
+                        <div class="order-controls">
+                            <button class="order-decrease">-</button>
+                            <button class="order-now">Order Now</button>
+                            <button class="order-increase">+</button>
+                        </div>
+        
+                    </div>
+                    <div class="menu-item" data-price="120">
+                        <img src="/categories/coffee/Macchiato.jpg" alt="Macchiato">
+                        <h3>Macchiato</h3>
+                        <p>A bold espresso topped with milk foam.<br>Price: ₹120</p>
+                        <div class="order-controls">
+                            <button class="order-decrease">-</button>
+                            <button class="order-now">Order Now</button>
+                            <button class="order-increase">+</button>
+                        </div>
+        
+                    </div>
+                    <div class="menu-item" data-price="100" >
+                        <img src="/categories/coffee/mocha1.jpg" alt="Mocha">
+                        <h3>Mocha</h3>
+                        <p>Espresso mixed with chocolate and milk.<br>Price: ₹100</p>
+                        <div class="order-controls">
+                            <button class="order-decrease">-</button>
+                            <button class="order-now">Order Now</button>
+                            <button class="order-increase">+</button>
+                        </div>
+        
+                    </div>
+                    <div class="menu-item" data-price="120">
+                        <img src="/categories/coffee/cold brew1.jpg" alt="Cold Brew">
+                        <h3>Cold Brew</h3>
+                        <p>Slow-steeped coffee served cold.<br>Price: ₹120</p>
+                        <div class="order-controls">
+                            <button class="order-decrease">-</button>
+                            <button class="order-now">Order Now</button>
+                            <button class="order-increase">+</button>
+                        </div>
+        
+                    </div>
+                    <div class="menu-item" data-price="100">
+                        <img src="/categories/coffee/Irish Coffee.jpg" alt="Irish Coffee">
+                        <h3>Irish Coffee</h3>
+                        <p>Espresso with a touch of Irish cream.<br>Price: ₹100</p>
+                        <div class="order-controls">
+                            <button class="order-decrease">-</button>
+                            <button class="order-now">Order Now</button>
+                            <button class="order-increase">+</button>
+                        </div>
+        
+                    </div>
+                    <div class="menu-item" data-price="150">
+                        <img src="/categories/coffee/Affogato1.jpg" alt="Affogato">
+                        <h3>Affogato</h3>
+                        <p>Espresso poured over vanilla ice cream.<br>Price: ₹150</p>
+                        <div class="order-controls">
+                            <button class="order-decrease">-</button>
+                            <button class="order-now">Order Now</button>
+                            <button class="order-increase">+</button>
+                        </div>
+        
+                    </div>
+                   
+                </div>
+    
+                  <!-- --tea-- -->
+                <div class="menu-category tea">
+                    <!-- <h3>Tea</h3> -->
+                    <div class="menu-item" data-price="30">
+                        <img src="/categories/tea/green tea.jpg" alt="Green Tea">
+                        <h3>Green Tea</h3>
+                        <p>A refreshing blend of green tea leaves brewed to perfection.<br>Price: ₹30</p>
+                        <div class="order-controls">
+                            <button class="order-decrease">-</button>
+                            <button class="order-now">Order Now</button>
+                            <button class="order-increase">+</button>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-price="40">
+                        <img src="/categories/tea/Masala Tea.jpg" alt="Masala Chai">
+                        <h3>Masala Chai</h3>
+                        <p>Traditional Indian tea with spices and milk.<br>Price: ₹40</p>
+                        <div class="order-controls">
+                            <button class="order-decrease">-</button>
+                            <button class="order-now">Order Now</button>
+                            <button class="order-increase">+</button>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-price="40">
+                        <img src="/categories/tea/black tea.jpg" alt="Black Tea">
+                        <h3>Black Tea</h3>
+                        <p>Rich and robust tea without milk.<br>Price: ₹40</p>
+                        <div class="order-controls">
+                            <button class="order-decrease">-</button>
+                            <button class="order-now">Order Now</button>
+                            <button class="order-increase">+</button>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-price="50">
+                        <img src="/categories/tea/lemon tea.jpg" alt="Lemon Tea">
+                        <h3>Lemon Tea</h3>
+                        <p>Tangy tea infused with lemon.<br>Price: ₹50</p>
+                        <div class="order-controls">
+                            <button class="order-decrease">-</button>
+                            <button class="order-now">Order Now</button>
+                            <button class="order-increase">+</button>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-price="90">
+                        <img src="/categories/tea/Matcha Latte.jpg" alt="Matcha Latte">
+                        <h3>Matcha Latte</h3>
+                        <p>Green tea powder whisked with milk.<br>Price: ₹90</p>
+                        <div class="order-controls">
+                            <button class="order-decrease">-</button>
+                            <button class="order-now">Order Now</button>
+                            <button class="order-increase">+</button>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-price="50">
+                        <img src="/categories/tea/herbal tea.jpg" alt="Herbal Tea">
+                        <h3>Herbal Tea</h3>
+                        <p>Refreshing tea with natural herbs.<br>Price: ₹50</p>
+                        <div class="order-controls">
+                            <button class="order-decrease">-</button>
+                            <button class="order-now">Order Now</button>
+                            <button class="order-increase">+</button>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-price="60">
+                        <img src="/categories/tea/mint tea.jpg" alt="Mint Tea">
+                        <h3>Mint Tea</h3>
+                        <p>Tea infused with fresh mint leaves.<br>Price: ₹60</p>
+                        <div class="order-controls">
+                            <button class="order-decrease">-</button>
+                            <button class="order-now">Order Now</button>
+                            <button class="order-increase">+</button>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-price="70">
+                        <img src="/categories/tea/earl grey.jpg" alt="Earl Grey">
+                        <h3>Earl Grey</h3>
+                        <p>Black tea with a hint of bergamot.<br>Price: ₹70</p>
+                        <div class="order-controls">
+                            <button class="order-decrease">-</button>
+                            <button class="order-now">Order Now</button>
+                            <button class="order-increase">+</button>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-price="90">
+                        <img src="/categories/tea/chamomile tea.jpg" alt="Chamomile Tea">
+                        <h3>Chamomile Tea</h3>
+                        <p>Calming tea with chamomile flowers.<br>Price: ₹90</p>
+                        <div class="order-controls">
+                            <button class="order-decrease">-</button>
+                            <button class="order-now">Order Now</button>
+                            <button class="order-increase">+</button>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-price="80">
+                        <img src="/categories/tea/Cardamom Tea.jpg" alt="Cardamom Tea">
+                        <h3>Cardamom Tea</h3>
+                        <p>Aromatic tea with cardamom spice.<br>Price: ₹80</p>
+                        <div class="order-controls">
+                            <button class="order-decrease">-</button>
+                            <button class="order-now">Order Now</button>
+                            <button class="order-increase">+</button>
+                        </div>
+                    </div>
+                </div>
+                   
+                   <!-- --smoothies-- -->
+                <div class="menu-category smoothies">
+                    <!-- <h3>Smoothies</h3> -->
+                    <div class="menu-item" data-price="100">
+                        <img src="/categories/smoothies/strawberry.jpg" alt="Strawberry Smoothie">
+                        <h3>Strawberry Smoothie</h3>
+                        <p>A creamy blend of strawberries, yogurt, and honey.<br>Price: ₹100</p>
+                        <div class="order-controls">
+                            <button class="order-decrease">-</button>
+                            <button class="order-now">Order Now</button>
+                            <button class="order-increase">+</button>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-price="120">
+                        <img src="/categories/smoothies/mango.jpg" alt="Mango Smoothie">
+                        <h3>Mango Smoothie</h3>
+                        <p>Rich and tropical mango smoothie.<br>Price: ₹120</p>
+                        <div class="order-controls">
+                            <button class="order-decrease">-</button>
+                            <button class="order-now">Order Now</button>
+                            <button class="order-increase">+</button>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-price="130">
+                        <img src="/categories/smoothies/blueberry.jpg" alt="Blueberry Smoothie">
+                        <h3>Blueberry Smoothie</h3>
+                        <p>Refreshing smoothie with blueberries and yogurt.<br>Price: ₹130</p>
+                        <div class="order-controls">
+                            <button class="order-decrease">-</button>
+                            <button class="order-now">Order Now</button>
+                            <button class="order-increase">+</button>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-price="110">
+                        <img src="/categories/smoothies/banana.jpg" alt="Banana Smoothie">
+                        <h3>Banana Smoothie</h3>
+                        <p>Energy-packed banana blended with milk.<br>Price: ₹110</p>
+                        <div class="order-controls">
+                            <button class="order-decrease">-</button>
+                            <button class="order-now">Order Now</button>
+                            <button class="order-increase">+</button>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-price="140">
+                        <img src="/categories/smoothies/Mango Berry Smoothie.jpg" alt="Mixed Fruit Smoothie">
+                        <h3>Mixed Fruit Smoothie</h3>
+                        <p>A healthy mix of seasonal fruits.<br>Price: ₹140</p>
+                        <div class="order-controls">
+                            <button class="order-decrease">-</button>
+                            <button class="order-now">Order Now</button>
+                            <button class="order-increase">+</button>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-price="120">
+                        <img src="/categories/smoothies/green smoothie.jpg" alt="Green Smoothie">
+                        <h3>Green Smoothie</h3>
+                        <p>Spinach, kale, and apple for a healthy boost.<br>Price: ₹120</p>
+                        <div class="order-controls">
+                            <button class="order-decrease">-</button>
+                            <button class="order-now">Order Now</button>
+                            <button class="order-increase">+</button>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-price="130">
+                        <img src="/categories/smoothies/coconut.jpg" alt="Coconut Smoothie">
+                        <h3>Coconut Smoothie</h3>
+                        <p>Creamy coconut blended with pineapple.<br>Price: ₹130</p>
+                        <div class="order-controls">
+                            <button class="order-decrease">-</button>
+                            <button class="order-now">Order Now</button>
+                            <button class="order-increase">+</button>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-price="150">
+                        <img src="/categories/smoothies/avocado.jpg" alt="Avocado Smoothie">
+                        <h3>Avocado Smoothie</h3>
+                        <p>Rich avocado with honey and milk.<br>Price: ₹150</p>
+                        <div class="order-controls">
+                            <button class="order-decrease">-</button>
+                            <button class="order-now">Order Now</button>
+                            <button class="order-increase">+</button>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-price="120">
+                        <img src="/categories/smoothies/chocolate.jpg" alt="Chocolate Smoothie">
+                        <h3>Chocolate Smoothie</h3>
+                        <p>Decadent chocolate with a creamy twist.<br>Price: ₹120</p>
+                        <div class="order-controls">
+                            <button class="order-decrease">-</button>
+                            <button class="order-now">Order Now</button>
+                            <button class="order-increase">+</button>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-price="140">
+                        <img src="/categories/smoothies/peach.jpg" alt="Peach Smoothie">
+                        <h3>Peach Smoothie</h3>
+                        <p>Sweet and tangy peach delight.<br>Price: ₹140</p>
+                        <div class="order-controls">
+                            <button class="order-decrease">-</button>
+                            <button class="order-now">Order Now</button>
+                            <button class="order-increase">+</button>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- --dessets-- -->
+                <div class="menu-category desserts">
+                    <!-- <h3>Desserts</h3> -->
+                    <div class="menu-item" data-price="120">
+                        <img src="/categories/desserts/Cheesecake.jpg" alt="Cheesecake">
+                        <h3>Cheesecake</h3>
+                        <p>Rich and creamy cheesecake with a biscuit base.<br>Price: ₹120</p>
+                        <div class="order-controls">
+                            <button class="order-decrease">-</button>
+                            <button class="order-now">Order Now</button>
+                            <button class="order-increase">+</button>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-price="90">
+                        <img src="/categories/desserts/Chocolate Mousse Brownies.jpg" alt="Brownie">
+                        <h3>Brownie</h3>
+                        <p>Fudgy chocolate brownie.<br>Price: ₹90</p>
+                        <div class="order-controls">
+                            <button class="order-decrease">-</button>
+                            <button class="order-now">Order Now</button>
+                            <button class="order-increase">+</button>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-price="100">
+                        <img src="/categories/desserts/apple pie.jpg" alt="Apple Pie">
+                        <h3>Apple Pie</h3>
+                        <p>Classic apple pie with cinnamon flavor.<br>Price: ₹100</p>
+                        <div class="order-controls">
+                            <button class="order-decrease">-</button>
+                            <button class="order-now">Order Now</button>
+                            <button class="order-increase">+</button>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-price="110">
+                        <img src="/categories/desserts/Creamy Homemade Chocolate Ice Cream.jpg" alt="Ice Cream">
+                        <h3>Ice Cream</h3>
+                        <p>Choose from a variety of flavors.<br>Price: ₹110</p>
+                        <div class="order-controls">
+                            <button class="order-decrease">-</button>
+                            <button class="order-now">Order Now</button>
+                            <button class="order-increase">+</button>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-price="150">
+                        <img src="/categories/desserts/tiramisu.jpg" alt="Tiramisu">
+                        <h3>Tiramisu</h3>
+                        <p>Italian dessert with coffee-soaked layers.<br>Price: ₹150</p>
+                        <div class="order-controls">
+                            <button class="order-decrease">-</button>
+                            <button class="order-now">Order Now</button>
+                            <button class="order-increase">+</button>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-price="130">
+                        <img src="/categories/desserts/Chocolate Pudding.jpg" alt="Pudding">
+                        <h3>Pudding</h3>
+                        <p>Soft caramel pudding.<br>Price: ₹130</p>
+                        <div class="order-controls">
+                            <button class="order-decrease">-</button>
+                            <button class="order-now">Order Now</button>
+                            <button class="order-increase">+</button>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-price="120">
+                        <img src="/categories/desserts/Crispy Chocolate Chip Waffles.jpg" alt="Waffles">
+                        <h3>Waffles</h3>
+                        <p>Golden waffles with maple syrup.<br>Price: ₹120</p>
+                        <div class="order-controls">
+                            <button class="order-decrease">-</button>
+                            <button class="order-now">Order Now</button>
+                            <button class="order-increase">+</button>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-price="100">
+                        <img src="/categories/desserts/Strawberry Brownie Trifle.jpg" alt="Trifle">
+                        <h3>Trifle</h3>
+                        <p>Layered dessert with fruits and cream.<br>Price: ₹100</p>
+                        <div class="order-controls">
+                            <button class="order-decrease">-</button>
+                            <button class="order-now">Order Now</button>
+                            <button class="order-increase">+</button>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Pastries -->
+    <div class="menu-category pastries">
+        <!-- <h3>Pastries</h3> -->
+        <div class="menu-item" data-price="50">
+            <img src="/categories/pastries/Croissant1.jpg" alt="Croissant">
+            <h3>Croissant</h3>
+            <p>Classic buttery and flaky pastry.<br>Price: ₹50</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="60">
+            <img src="/categories/pastries/Danish pastry.jpg" alt="Danish">
+            <h3>Danish Pastry</h3>
+            <p>Sweet pastry filled with fruit or custard.<br>Price: ₹60</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="70">
+            <img src="/categories/pastries/fruit tart.jpg" alt="Fruit Tart">
+            <h3>Fruit Tart</h3>
+            <p>Pastry crust filled with custard and fresh fruits.<br>Price: ₹70</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="40">
+            <img src="/categories/pastries/Apple Strudel.jpg" alt="Apple Strudel">
+            <h3>Apple Strudel</h3>
+            <p>Delicious layers of pastry filled with spiced apples.<br>Price: ₹40</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="45">
+            <img src="/categories/pastries/Éclairs.jpg" alt="Éclair">
+            <h3>Éclair</h3>
+            <p>Light choux pastry filled with cream and topped with chocolate.<br>Price: ₹45</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="55">
+            <img src="/categories/pastries/scones.jpg" alt="Scone">
+            <h3>Scone</h3>
+            <p>Soft and fluffy pastry served with jam and cream.<br>Price: ₹55</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="65">
+            <img src="/categories/pastries/Brioche.jpg" alt="Brioche">
+            <h3>Brioche</h3>
+            <p>Rich, buttery, and slightly sweet bread.<br>Price: ₹65</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="50">
+            <img src="/categories/pastries/panettone.jpg" alt="Panettone">
+            <h3>Panettone</h3>
+            <p>Italian holiday bread with candied fruits.<br>Price: ₹50</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="60">
+            <img src="/categories/pastries/Cinnamon Rolls.jpg" alt="Cinnamon Roll">
+            <h3>Cinnamon Roll</h3>
+            <p>Spiced sweet roll topped with icing.<br>Price: ₹60</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="50">
+            <img src="/categories/pastries/Cheese Danish.jpg" alt="Cheese Danish">
+            <h3>Cheese Danish</h3>
+            <p>Soft pastry filled with cream cheese.<br>Price: ₹50</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Salads -->
+    <div class="menu-category salads">
+        <!-- <h3>Salads</h3> -->
+        <div class="menu-item" data-price="110">
+            <img src="/categories/salads/greek.jpg" alt="Greek Salad">
+            <h3>Greek Salad</h3>
+            <p>Fresh vegetables, olives, and feta cheese.<br>Price: ₹110</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="150">
+            <img src="/categories/salads/Classic Caesar Salad.jpg" alt="Caesar Salad">
+            <h3>Caesar Salad</h3>
+            <p>Romaine lettuce, parmesan, and croutons with Caesar dressing.<br>Price: ₹150</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="100">
+            <img src="/categories/salads/cobb.jpg" alt="Cobb Salad">
+            <h3>Cobb Salad</h3>
+            <p>Chicken, avocado, bacon, and eggs over greens.<br>Price: ₹100</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="70">
+            <img src="/categories/salads/Winter Fruit Salad.jpg" alt="Fruit Salad">
+            <h3>Fruit Salad</h3>
+            <p>Refreshing mix of seasonal fruits.<br>Price: ₹70</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="135">
+            <img src="/categories/salads/Quinoa Avocado Salad.jpg" alt="Quinoa Salad">
+            <h3>Quinoa Salad</h3>
+            <p>High-protein quinoa with vegetables and lemon dressing.<br>Price: ₹135</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="120">
+            <img src="/categories/salads/pasta.jpg" alt="Pasta Salad">
+            <h3>Pasta Salad</h3>
+            <p>Cold pasta tossed with veggies and dressing.<br>Price: ₹120</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="120">
+            <img src="/categories/salads/Kale Salad Recipe.jpg" alt="Kale Salad">
+            <h3>Kale Salad</h3>
+            <p>Kale, nuts, and cranberries with vinaigrette.<br>Price: ₹120</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="100">
+            <img src="/categories/salads/vegitable.jpg" alt="Vegetable Salad">
+            <h3>Vegetable Salad</h3>
+            <p>Mix of raw and steamed vegetables.<br>Price: ₹100</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="160">
+            <img src="/categories/salads/chicken.jpg" alt="Chicken Salad">
+            <h3>Chicken Salad</h3>
+            <p>Grilled chicken with greens and dressing.<br>Price: ₹160</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="190">
+            <img src="/categories/salads/tuna.jpg" alt="Tuna Salad">
+            <h3>Tuna Salad</h3>
+            <p>Fresh tuna mixed with vegetables and herbs.<br>Price: ₹190</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Sandwiches -->
+    <div class="menu-category sandwiches">
+        <!-- <h3>Sandwiches</h3> -->
+        <div class="menu-item" data-price="100">
+            <img src="/categories/sandwiches/Club Sandwich.jpg" alt="Club Sandwich">
+            <h3>Club Sandwich</h3>
+            <p>Layered sandwich with chicken, lettuce, and tomatoes.<br>Price: ₹100</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="80">
+            <img src="/categories/sandwiches/grilled.jpg" alt="Grilled Cheese">
+            <h3>Grilled Cheese</h3>
+            <p>Classic toasted bread with melted cheese.<br>Price: ₹80</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="90">
+            <img src="/categories/sandwiches/veggie.jpg" alt="Veggie Sandwich">
+            <h3>Veggie Sandwich</h3>
+            <p>Fresh vegetables and hummus in bread.<br>Price: ₹90</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="95">
+            <img src="/categories/sandwiches/turkey.jpg" alt="Turkey Sandwich">
+            <h3>Turkey Sandwich</h3>
+            <p>Smoked turkey and lettuce on rye bread.<br>Price: ₹95</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="85">
+            <img src="/categories/sandwiches/tuna.jpg" alt="Tuna Sandwich">
+            <h3>Tuna Sandwich</h3>
+            <p>Tuna mixed with mayo and veggies.<br>Price: ₹85</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        
+        <div class="menu-item" data-price="75">
+            <img src="/categories/sandwiches/peanut.jpg" alt="Peanut Butter Sandwich">
+            <h3>Peanut Butter Sandwich</h3>
+            <p>Creamy peanut butter and jelly.<br>Price: ₹75</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="120">
+            <img src="/categories/sandwiches/salmon.jpg" alt="Salmon Sandwich">
+            <h3>Salmon Sandwich</h3>
+            <p>Smoked salmon with cream cheese.<br>Price: ₹120</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="90">
+            <img src="/categories/sandwiches/han and cheese.jpg" alt="Ham and Cheese">
+            <h3>Ham and Cheese</h3>
+            <p>Ham slices with melted cheese.<br>Price: ₹90</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="85">
+            <img src="/categories/sandwiches/caprese.jpg" alt="Caprese Sandwich">
+            <h3>Caprese Sandwich</h3>
+            <p>Tomatoes, mozzarella, and basil.<br>Price: ₹85</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Soups -->
+    <div class="menu-category soups">
+        <!-- <h3>Soups</h3> -->
+        <div class="menu-item" data-price="70">
+            <img src="/categories/soups/Tomato Soup Recipe (Homemade & Easy).jpg" alt="Tomato Soup">
+            <h3>Tomato Soup</h3>
+            <p>Rich and creamy tomato-based soup.<br>Price: ₹70</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="80">
+            <img src="/categories/soups/chicken.jpg" alt="Chicken Soup">
+            <h3>Chicken Soup</h3>
+            <p>Hearty soup with chicken and vegetables.<br>Price: ₹80</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="75">
+            <img src="/categories/soups/mushroom.jpg" alt="Mushroom Soup">
+            <h3>Mushroom Soup</h3>
+            <p>Creamy soup made with fresh mushrooms.<br>Price: ₹75</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="90">
+            <img src="/categories/soups/Minestrone Soup.jpg" alt="Minestrone Soup">
+            <h3>Minestrone Soup</h3>
+            <p>Classic Italian soup with vegetables and pasta.<br>Price: ₹90</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="85">
+            <img src="/categories/soups/Sweet Corn Clear Soup Recipe _ Cook Click N Devour!!!.jpg" alt="Sweet Corn Soup">
+            <h3>Sweet Corn Soup</h3>
+            <p>Thick soup with sweet corn kernels.<br>Price: ₹85</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="95">
+            <img src="/categories/soups/hot and sour.jpg" alt="Hot and Sour Soup">
+            <h3>Hot and Sour Soup</h3>
+            <p>Spicy soup with a tangy kick.<br>Price: ₹95</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="80">
+            <img src="/categories/soups/French Onion Soup.jpg" alt="French Onion Soup">
+            <h3>French Onion Soup</h3>
+            <p>Caramelized onions in a savory broth.<br>Price: ₹80</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="70">
+            <img src="/categories/soups/pumpkin.jpg" alt="Pumpkin Soup">
+            <h3>Pumpkin Soup</h3>
+            <p>Silky and flavorful pumpkin-based soup.<br>Price: ₹70</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="90">
+            <img src="/categories/soups/Vegan Spinach Soup - Healthier Steps.jpg" alt="Spinach Soup">
+            <h3>Spinach Soup</h3>
+            <p>Healthy and creamy spinach puree.<br>Price: ₹90</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="100">
+            <img src="/categories/soups/wonton.jpg" alt="Wonton Soup">
+            <h3>Wonton Soup</h3>
+            <p>Broth-based soup with dumplings.<br>Price: ₹100</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Specials -->
+    <div class="menu-category specials">
+        <!-- <h3>Specials</h3> -->
+        <div class="menu-item" data-price="150">
+            <img src="/categories/specials/thali.jpg" alt="Vegetarian Platter">
+            <h3>Vegetarian Platter</h3>
+            <p>Assorted grilled vegetables with dips.<br>Price: ₹150</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        
+        <div class="menu-item" data-price="130">
+            <img src="/categories/specials/One Pot Creamy Penne Alfredo with Spicy Arugula_.jpg" alt="Pasta Alfredo">
+            <h3>Pasta Alfredo</h3>
+            <p>Creamy pasta with parmesan sauce.<br>Price: ₹130</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="140">
+            <img src="/categories/specials/The BEST Grilled Salmon Recipe {5-Ingredient Recipe!} - Cooking Classy.jpg" alt="Grilled Salmon">
+            <h3>Grilled Salmon</h3>
+            <p>Fresh salmon fillet grilled to perfection.<br>Price: ₹140</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="120">
+            <img src="/categories/specials/Tomato Risotto.jpg" alt="Risotto">
+            <h3>Risotto</h3>
+            <p>Classic Italian rice dish with creamy texture.<br>Price: ₹120</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        
+        <div class="menu-item" data-price="180">
+            <img src="/categories/specials/Roasted Chicken with Garlic Herb Butter.jpg" alt="Roast Chicken">
+            <h3>Roast Chicken</h3>
+            <p>Succulent roast chicken served with herb gravy.<br>Price: ₹180</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+
+        <div class="menu-item" data-price="110">
+            <img src="/categories/specials/spaghetti.jpg" alt="Spaghetti Bolognese">
+            <h3>Spaghetti Bolognese</h3>
+            <p>Classic Italian pasta with a rich meat sauce.<br>Price: ₹110</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+       
+        <div class="menu-item" data-price="140">
+            <img src="/categories/specials/Pan-fried Garlic Butter Shrimp.jpg" alt="Garlic Butter Shrimp">
+            <h3>Garlic Butter Shrimp</h3>
+            <p>Juicy shrimp cooked in garlic butter.<br>Price: ₹140</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        
+        <div class="menu-item" data-price="150">
+            <img src="/categories/specials/seafood.jpg" alt="Seafood Paella">
+            <h3>Seafood Paella</h3>
+            <p>Traditional Spanish rice dish with seafood.<br>Price: ₹150</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="100">
+            <img src="/categories/specials/lasanga.jpg" alt="Lasagna">
+            <h3>Lasagna</h3>
+            <p>Layers of pasta, meat sauce, and cheese.<br>Price: ₹100</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="130">
+            <img src="/categories/specials/veg curry.jpg" alt="Vegetable Curry">
+            <h3>Vegetable Curry</h3>
+            <p>A vibrant vegetable curry served with steamed rice.<br>Price: ₹130</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+     
+    </div>
+    
+    <!-- Snacks -->
+    <div class="menu-category snacks">
+        <!-- <h3>Snacks</h3> -->
+        <div class="menu-item" data-price="40">
+            <img src="/categories/snacks/Crispy Air Fryer Sweet Potato Fries (Easy, Healthy Snack Idea!).jpg" alt="French Fries">
+            <h3>French Fries</h3>
+            <p>Golden crispy potato fries.<br>Price: ₹40</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="50">
+            <img src="/categories/snacks/Nachos Med Pulled Kylling, BBQ Sauce Og Cheddar.jpg" alt="Nachos">
+            <h3>Nachos</h3>
+            <p>Crunchy nachos with cheese and salsa.<br>Price: ₹50</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="60">
+            <img src="/categories/snacks/Homemade Crispy Mozzarella Sticks - EasyWorldRecipes.jpg" alt="Mozzarella Sticks">
+            <h3>Mozzarella Sticks</h3>
+            <p>Fried mozzarella cheese sticks.<br>Price: ₹60</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="45">
+            <img src="/categories/snacks/SAMOSA_ An Iconic Delight.jpg" alt="Samosa">
+            <h3>Samosa</h3>
+            <p>Spicy potato-filled pastry.<br>Price: ₹45</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="55">
+            <img src="/categories/snacks/Vegetarian Spring Rolls Recipe (Vegan) - Cubes N Juliennes.jpg" alt="Spring Rolls">
+            <h3>Spring Rolls</h3>
+            <p>Crispy rolls stuffed with vegetables.<br>Price: ₹55</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="70">
+            <img src="/categories/snacks/Chicken Cheese Balls Recipe.jpg" alt="Cheese Balls">
+            <h3>Cheese Balls</h3>
+            <p>Golden-fried cheesy bites.<br>Price: ₹70</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="30">
+            <img src="/categories/snacks/Easy Caramel Popcorn Recipe.jpg" alt="Popcorn">
+            <h3>Popcorn</h3>
+            <p>Lightly salted buttery popcorn.<br>Price: ₹30</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="80">
+            <img src="/categories/snacks/Crispy Onion Rings Recipe - Easy + Vegan.jpg" alt="Onion Rings">
+            <h3>Onion Rings</h3>
+            <p>Crunchy battered onion rings.<br>Price: ₹80</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="55">
+            <img src="/categories/snacks/Ham and cheese pastry pinwheels.jpg" alt="Cheese Puffs">
+            <h3>Cheese Puffs</h3>
+            <p>Light, crispy cheese-filled snacks.<br>Price: ₹55</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="50">
+            <img src="/categories/snacks/Parmesan Ranch Potato Chips.jpg" alt="Crisps">
+            <h3>Crisps</h3>
+            <p>Crunchy potato crisps with a variety of flavors.<br>Price: ₹50</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="70">
+            <img src="/categories/snacks/Bhel Puri (+Video), Mumbai style Bhelpuri Recipe - Cooking With Sapana.jpg" alt="Bhel Puri">
+            <h3>Bhel Puri</h3>
+            <p>A tangy, crispy Indian snack with puffed rice and chutneys.<br>Price: ₹70</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="80">
+            <img src="/categories/snacks/The Perfect Sourdough Grilled Cheese – Sourdough Brandon.jpg" alt="Grilled Cheese">
+            <h3>Grilled Cheese</h3>
+            <p>Toasty grilled sandwich with melted cheese.<br>Price: ₹80</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>
+        <div class="menu-item" data-price="100">
+            <img src="/categories/snacks/Chicken Egg Roll Kolkata Style.jpg" alt="Egg Roll">
+            <h3>Egg Roll</h3>
+            <p>Soft tortilla filled with scrambled eggs and veggies.<br>Price: ₹100</p>
+            <div class="order-controls">
+                <button class="order-decrease">-</button>
+                <button class="order-now">Order Now</button>
+                <button class="order-increase">+</button>
+            </div>
+        </div>    
+            </div>
+        </section>
+
+        <!-- ----------------------------------------------------------------testimonies--------------------------------------------------- -->
+
+        <section id="testimonials">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonial-container">
+                <div class="testimonial">
+                    <img src="/testimonies/anil.jpg" alt="Customer 1">
+                    <div class="testimonial-content">
+                        <p>"Cup & Crumbs offers the best coffee in town! Every cup is made with care, and the ambiance is perfect for a cozy time with friends!-Anil S."</p>
+                        <div class="stars">
+                            <span>&#9733;</span> <!-- Full Star -->
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                            <span>&#9734;</span> <!-- Empty Star -->
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="testimonial">
+                    <img src="/testimonies/pooja.jpg" alt="Customer 2">
+                    <div class="testimonial-content">
+                        <p>"The pastries here are to die for, and the coffee is brewed to perfection. I come here every week for my caffeine fix!-Pooja."</p>
+                        <div class="stars">
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial">
+                    <img src="/testimonies/reddy.jpg" alt="Customer 2">
+                    <div class="testimonial-content">
+                        <p></p>"Best coffee in town!"
+                            I’ve been to many cafes, but Cup & Crumbs stands out. Their coffee is rich, smooth, and always hits the spot. Plus, the ambiance is so cozy! – Reddy R.</p>
+                        <div class="stars">
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial">
+                    <img src="/testimonies/kumari.jpg" alt="Customer 2">
+                    <div class="testimonial-content">
+                        <p>"A hidden gem!"
+                            I stumbled upon this cafe, and it’s now my go-to spot. The staff are incredibly friendly, and the pastries are to die for. – Kumari B.
+                            </p>
+                        <div class="stars">
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                            <span>&#9734;</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial">
+                    <img src="/testimonies/raju.jpg" alt="Customer 2">
+                    <div class="testimonial-content">
+                        <p>"Perfect for work or relaxation."
+                            This place is amazing for both productivity and unwinding. Their Wi-Fi is fast, the environment is calm, and the coffee fuels my creativity. – Raju V.
+                            </p>
+                        <div class="stars">
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                            <span>&#9734;</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial">
+                    <img src="/testimonies/mouli.jpg" alt="Customer 2">
+                    <div class="testimonial-content">
+                        <p>"The freshest flavors!"
+                            The attention to quality here is unmatched. You can taste the freshness in every cup and every bite. – Mouli G.
+                            </p>
+                        <div class="stars">
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Add more testimonials here -->
+            </div>
+        </section>
+
+        <!-- -----------------------------------------------------location--------------------------------------------------- -->
+    
+        <section id="location">
+            <h2 class="loc">Find Us</h2>
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+                <div style="flex: 1; padding-right: 10px;">
+                    <!-- Video element for animated video -->
+                    <video id="location-video" controls autoplay loop style="width: 150%; height: 500px; border-radius: 30px;margin-left: 30%;">
+                        <!-- Placeholder for video -->
+                        <source id="location-video-source" src="/images/location_video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div style="flex: 1; padding-left: 50px;">
+                    <p id="location-address"></p>
+                    <p id="location-hours"></p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- <br><br><br><br><br><br><br><br><br><br> -->
+
+    <!-- --------------------------------------------------contact-------------------------------------------------- -->
+    <section id="contact-social">
+        <div id="contact">
+            <h2>Contact Us</h2>
+            <div style="text-align: center;">
+                <!-- Dynamic contact information -->
+                <p id="contact-phone"></p>
+                <p id="contact-email"></p>
+                <p id="contact-address"></p>
+                <form class="msg">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required> 
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required> 
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required style="width: 720px; height: 60px; border-radius: 10px;"></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    
+        <div id="social">
+            <h3>Follow Us</h3>
+            <div class="social">
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ------------------------------------------------------footer------------------------------------------------- -->
+
+        <footer>
+            <p>&copy; 2024 Cup & Crumbs Cafe Shop. All rights reserved.</p>
+        </footer>
+
+
+
+     </div>
+
+     <!-- --------------------------------------------------------script------------------------------------------------------- -->
+
+     <script src="script.js"></script>
+
+
+</body>
+</html>
